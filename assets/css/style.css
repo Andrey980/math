@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+header {
+  background-color: black;
+  padding: 0.5vw;
+  padding-right: 0.7vw;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+}
+
+header nav {
+  display: flex;
+}
+
+header #math-logo {
+  width: 7vw;
+  height: 3.5vw;
+}
+
+header nav ul {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 1vw;
+  align-items: center;
+}
+
+header nav ul li a {
+  color: white;
+}
+
+header #nav-container {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  column-gap: 1vw;
+}
+
+header #nav-container form {
+  border: 0.1vw solid #fff;
+  border-radius: 5vw;
+  width: 5vw;
+  height: 2.2vw;
+  display: grid;
+  grid-template-columns: auto 1vw 1vw;
+  align-content: center;
+  justify-content: center;
+}
+
+header #nav-container form input {
+  background: none;
+  width: 1vw;
+  border: none;
+  border-bottom: 0.15vw solid #f00;
+  margin: 0 0.3vw;
+}
