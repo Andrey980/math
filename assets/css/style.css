@@ -14,6 +14,9 @@ header {
   display: flex;
   color: white;
   justify-content: space-between;
+  border-bottom: 1px solid #444;
+  position: sticky;
+  top: 0;
 }
 
 header nav {
@@ -34,6 +37,14 @@ header nav ul {
 
 header nav ul li a {
   color: white;
+  padding: 0.5vw;
+  border-radius: 0.2vw;
+}
+
+
+header nav ul li a:hover {
+  background-color: #333;
+  color: rgb(255, 148, 148);
 }
 
 header #nav-container {
@@ -58,6 +69,105 @@ header #nav-container form input {
   background: none;
   width: 1vw;
   border: none;
-  border-bottom: 0.15vw solid #f00;
+  text-decoration-line: underline;
+  /* animation: blink 1s infinite; */
+  color: white;
+  caret-color: transparent;
   margin: 0 0.3vw;
+}
+
+header #nav-container form #cancel {
+  display: none;
+  width: 0.5;
+}
+
+header #nav-container #theme {
+  cursor: pointer;
+}
+
+main #homepage {
+  background-color: #222;
+  padding: 2vw;
+  color: #fff;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+  background-image: url(../img/formulas.png);
+  background-blend-mode: darken;
+}
+
+main #homepage h1 {
+  line-height: 3vw;
+  text-align: left;
+  font-size: 3vw;
+  font-weight: bolder;
+}
+
+main #homepage h1 u {
+  text-decoration: underline;
+  text-decoration-color: rgb(255, 148, 148);
+}
+
+main #homepage h1::after {
+  content: '';
+  width: 1.3vw;
+  height: .29vw;
+  background: rgb(255, 148, 148);
+  display: inline-block;
+  margin-left: .1vw;
+}
+
+main #homepage #form-homepage {
+  border: 0.1vw solid #fff;
+  border-radius: 5vw;
+  width: 30vw;
+  height: 3.5vw;
+  display: grid;
+  grid-template-columns: auto 1vw 1vw;
+  align-content: center;
+  justify-content: center;
+}
+
+main #homepage #form-homepage input {
+  background: none;
+  width: 25vw;
+  border: none;
+  color: white;
+}
+
+main #featured {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 2vw;
+  padding: 2vw;
+  background: #333;
+  color: #fff;
+}
+
+main #featured #featured-container {
+  display: grid;
+  width: 80vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2vw;
+}
+
+main #featured-container .featured-articles {
+  border: 1px solid #fff;
+  padding: 1vw;
+  border-radius: 0.5vw;
+}
+
+@keyframes blink {
+  0% {
+    text-decoration: underline;
+  }
+
+  100% {
+    text-decoration: none;
+  }
 }
