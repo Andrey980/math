@@ -53,14 +53,72 @@ header nav ul li #math-plus::after {
 
 header nav ul li a {
   color: white;
-  padding: 0.5vw;
+  padding: 0.9vw;
   border-radius: 0.2vw;
 }
 
 
-header nav ul li a:hover {
+header ul #references>a:hover,
+header ul #guides>a:hover,
+header ul #math-plus>a:hover {
   background-color: #333;
   color: rgb(255, 148, 148);
+}
+
+
+header #nav-references,
+header #nav-guides,
+header #nav-math {
+  background-color: #aaa;
+  padding: .5vw;
+  border: 2px solid #fff;
+  border-radius: .15vw;
+}
+
+header #nav-references,
+header #nav-guides,
+header #nav-math {
+  display: none;
+}
+
+header #nav-references {
+  position: absolute;
+  top: 4vw;
+  left: 7.5vw;
+}
+
+header #nav-guides {
+  position: absolute;
+  top: 4vw;
+  left: 14vw;
+}
+
+header #nav-math {
+  position: absolute;
+  top: 4vw;
+  left: 19vw;
+}
+
+header #nav-references li,
+header #nav-guides li,
+header #nav-math li {
+  line-height: 1.5vw;
+  padding: .5vw;
+
+}
+
+header #nav-references li:hover,
+header #nav-guides li:hover,
+header #nav-math li:hover {
+  background-color: #888;
+  border-radius: .1vw;
+}
+
+header #nav-references li a,
+header #nav-guides li a,
+header #nav-math li a {
+  color: #fff;
+
 }
 
 header #nav-container {
