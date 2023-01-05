@@ -35,6 +35,22 @@ header nav ul {
   align-items: center;
 }
 
+li #math-plus {
+  position: relative;
+}
+
+header nav ul li #math-plus::after {
+  content: "";
+  background-color: #f00;
+  border: 1px solid #f00;
+  border-radius: 5vw;
+  height: 0.3vw;
+  position: absolute;
+  right: -0.2vw;
+  top: 0;
+  width: 0.3vw;
+}
+
 header nav ul li a {
   color: white;
   padding: 0.5vw;
@@ -84,7 +100,8 @@ header #nav-container form input {
   margin: 0 0.3vw;
 }
 
-header #nav-container form #cancel, header #nav-container form #search-icon {
+header #nav-container form #cancel,
+header #nav-container form #search-icon {
   display: none;
   width: 1.5vw;
   margin: .2vw 0;
@@ -97,10 +114,11 @@ header #nav-container form #search-icon {
   display: flex;
 }
 
-header #nav-container form #cancel:hover, header #nav-container form #search-icon:hover  {
+header #nav-container form #cancel:hover,
+header #nav-container form #search-icon:hover {
   background-color: #333;
   color: rgb(255, 148, 148);
-} 
+}
 
 header #nav-container #theme {
   cursor: pointer;
@@ -183,11 +201,156 @@ main #featured-container .featured-articles {
   border-radius: 0.5vw;
 }
 
+main section h2 {
+  text-align: left;
+  width: 80vw;
+}
+
 main #featured-container .featured-articles a {
   color: #fff;
 }
 
-main #featured-container .featured-articles a:hover, main #featured-container .featured-articles h3:hover {
+main #featured-container .featured-articles a:hover,
+main #featured-container .featured-articles h3:hover {
   text-decoration: underline;
   cursor: pointer;
-}  
+}
+
+main #latest-news,
+main #recent-cont {
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 2vw;
+  padding: 2vw;
+}
+
+main #news-list {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  font-size: 1.5vw;
+}
+
+#news-list .news-item {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "news-title news-date"
+    "news-subtitle news-date"
+  ;
+  align-items: center;
+  padding: 0.8vw;
+  border-radius: 0.2vw;
+}
+
+
+#news-list .news-item .news-title {
+  grid-area: news-title;
+}
+
+#news-list .news-item .news-subtitle {
+  grid-area: news-subtitle;
+  font-size: 1vw;
+}
+
+#news-list .news-item .news-date {
+  grid-area: news-date;
+  text-align: right;
+  font-size: 1vw;
+}
+
+#news-list .news-item:nth-child(odd) {
+  background-color: #aaa;
+
+}
+
+#news-list .news-item span a,
+#news-list .news-item p {
+  color: white;
+
+}
+
+#news-list .news-item span a:hover {
+  text-decoration: underline;
+  color: #eee;
+}
+
+footer {
+  background-color: #000;
+  padding: 2vw;
+  color: #fff;
+  border-top: 1px solid #444;
+}
+
+footer #nav-footer {
+  display: grid;
+  grid-template-areas:
+    "footer-logo footer-col-1 footer-col-2 footer-col-3 footer-col-4"
+    "footer-legal footer-legal footer-legal footer-legal footer-legal"
+  ;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+footer div a {
+  color: #fff;
+}
+
+footer div a:hover {
+  color: rgb(255, 148, 148);
+}
+
+footer div p {
+  font-size: 1.2vw;
+}
+
+#nav-footer #math-logo-footer {
+  font-size: 1.8vw;
+}
+
+#nav-footer #footer-legal {
+  padding: 1vw 0 0;
+  border-top: 1px solid #444;
+}
+
+#nav-footer #footer-legal #license {
+  font-size: 0.85vw;
+  line-height: 1.5vw;
+}
+
+#footer-legal #license a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+footer #footer-logo {
+  grid-area: footer-logo;
+}
+
+footer #footer-col-1 {
+  grid-area: footer-col-1;
+}
+
+footer #footer-col-2 {
+  grid-area: footer-col-2;
+}
+
+footer #footer-col-3 {
+  grid-area: footer-col-3;
+}
+
+footer #footer-col-4 {
+  grid-area: footer-col-4;
+}
+
+footer #footer-legal {
+  grid-area: footer-legal;
+}
